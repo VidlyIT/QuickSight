@@ -5,7 +5,7 @@
         <ion-icon ios="md-contact" md="md-contact"></ion-icon>
       </ion-button>
     </ion-buttons>
-    <ion-title color="light" text-center>Referrals</ion-title>
+    <ion-title color="light" text-center>Emergency Contacts</ion-title>
     <ion-buttons slot="end">
       <ion-button color="light" (click)="newReferral()">
         <ion-icon ios="md-add" md="md-add"></ion-icon>
@@ -22,10 +22,10 @@
     </ion-refresher-content>
   </ion-refresher>
   <mat-tab-group class="fixed-header" mat-stretch-tabs>
-    <mat-tab label="Received">
+    <mat-tab label="Contact Info">
       <app-received-referrals-list [refresh]="refreshNeeded.asObservable()"></app-received-referrals-list>
     </mat-tab>
-    <mat-tab label="Sent">
+    <mat-tab label="Doctor Info">
       <app-sent-referrals-list [refresh]="refreshNeeded.asObservable()"></app-sent-referrals-list>
     </mat-tab>
   </mat-tab-group>
