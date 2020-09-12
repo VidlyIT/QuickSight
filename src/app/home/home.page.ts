@@ -95,7 +95,7 @@ export class HomePage implements OnInit {
 
   ngOnInit() {
     this.presentAlert();
-    this.title.setTitle('Driver Dashboard');
+    this.title.setTitle('Dashboard');
     this.router.events.subscribe((event: Event) => {
       if (event instanceof NavigationStart) {
         this.hideModal();
