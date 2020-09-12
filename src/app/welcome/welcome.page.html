@@ -1,0 +1,76 @@
+<div class="page__welcome h-100">
+  <div class="bg"></div>
+  <div class="content">
+    <ion-slides class="onboarding slides" pager="true" [options]="slideOpts">
+      <ion-slide class="screen">
+        <div class="intro">
+          <div class="image"></div>
+          <div class="text">
+            <h2>Welcome to</h2>
+            <h2>Carry Load</h2>
+            <p>
+              A trusted partner in providing a new blockchain based intelligent logistics platform
+            </p>
+          </div>
+        </div>
+      </ion-slide>
+      <ion-slide class="screen">
+        <div class="intro">
+          <div class="image"></div>
+          <div class="text">
+            <h2>Traditional Logistics</h2>
+            <p>With traditional methods for recording transactions and tracking assets, participants on a network keep their own ledgers and other records in systems that do not always integrate. It is clearly inefficient due to delays in executing agreements and the duplication of effort required</p>
+          </div>
+        </div>
+      </ion-slide>
+      <ion-slide class="screen">
+        <div class="intro">
+          <div class="image"></div>
+          <div class="text">
+            <h2>New Logistics</h2>
+            <p>
+              Blockchain is a shared, distributed ledger that facilitates the process of recording transactions and tracking assets in a business network.
+            </p>
+          </div>
+        </div>
+      </ion-slide>
+      <ion-slide class="screen">
+        <div class="intro">
+          <div class="image"></div>
+          <div class="text">
+            <h2>Smart Contracts</h2>
+            <p>DPermission based semi-private Smart Contracts allow for your business relationships and partnerships to be mirrored</p>
+          </div>
+        </div>
+      </ion-slide>
+    </ion-slides>
+    <div class="welcome-text">
+      <div class="intro">
+        <div>
+          <div class="social-login">
+            <!-- <button class="btn btn-fill fb">Continue with Facebook</button> -->
+            <button
+              class="btn btn-fill"
+              routerLink="/register"
+              routerDirection="root"
+            >
+              Register Now
+            </button>
+          </div>
+          <div class="divider">
+            <small>Already registered? </small>
+          </div>
+          <div class="login">
+            <button
+              class="btn btn-outline"
+              routerLink="/login"
+              routerDirection="root"
+            >
+              Sign In
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

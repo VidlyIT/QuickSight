@@ -1,0 +1,381 @@
+<ion-header class="flat">
+  <ion-toolbar class="colored">
+    <ion-buttons slot="start">
+      <ion-button color="light" routerDirection="forward" routerLink="/account">
+        <ion-icon ios="md-contact" md="md-contact"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title color="light" text-center>Home</ion-title>
+    <ion-buttons slot="end">
+      <ion-button color="light" (click)="initSearch()">
+        <ion-icon ios="ios-search" md="ios-search"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <section class="intro animated fadeIn" *ngIf="showReminder">
+    <img src="assets/images/doctor-intro.jpg" alt="doctor intro">
+    <div class="intro-text">
+      <h2>Hi</h2>
+      <p>It seems, some required profile information are missing or the submitted infromation is not certified. Due to
+        that you've been given limited access to the features of the app.</p>
+      <a (click)="goToProfile()" class="go-btn">Go to Profile</a>
+      <a (click)="dismissReminder()" class="skip-btn">I'll do that later</a>
+    </div>
+  </section>
+  <section>
+    <ion-label class="section__title" slot="start">
+      Recent Bids
+      <ion-text class="more-link" text-right routerLink="/schedule" routerDirection="forward">See All
+      </ion-text>
+    </ion-label>
+    <div class="overscroll-wrapper">
+      <ion-slides class="slides__dashboard contact-list" [options]="patientsSlideOpts">
+        <ion-slide tappable (click)="selectPatient(item)" *ngFor="let item of patients">
+          <div class="contact">
+            <div class="avatar">
+              <img [src]="item.picture" alt="...">
+            </div>
+            <div class="name">{{item.name.first}} {{item.name.last}}</div>
+            <span class="age">({{item.age}})</span>
+          </div>
+        </ion-slide>
+      </ion-slides>
+    </div>
+  </section>
+ 
+  <!-- <section>
+     <ion-slides class="slides__dashboard featured mt-0 full-width" [options]="slideOpts" pager="true">
+      <ion-slide>
+        <div class="slides__featured">
+          <div class="banner" style="background-image: url('assets/images/genomics.png')">
+            <div class="main-text">Genomics</div>
+          </div>
+        </div>
+      </ion-slide>
+      <ion-slide>
+        <div class="slides__featured">
+          <div class="banner" style="background-image: url('assets/images/dermatoscopy.jpg')">
+            <div class="main-text">Virtual Dermatoscopy</div>
+          </div>
+        </div>
+      </ion-slide>
+      <ion-slide>
+        <div class="slides__featured">
+          <div class="banner" style="background-image: url('assets/images/tourism.jpg')">
+            <div class="main-text">Healthcare Tourism</div>
+          </div>
+        </div>
+      </ion-slide>
+      <ion-slide>
+        <div class="slides__featured">
+          <div class="banner" style="background-image: url('assets/images/blogs.jpg')">
+            <div class="main-text">Blogs</div>
+          </div>
+        </div>
+      </ion-slide>
+    </ion-slides>
+  </section> -->
+  <!-- Social -->
+  <!-- <section>
+    <ion-label class="section__title" slot="start">
+      Social Network
+    </ion-label>
+    <div class="overscroll-wrapper">
+      <ion-slides class="slides__dashboard social" [options]="socialSlideOpts">
+        <ion-slide tappable>
+          <div class="card" routerLink="/social/community-feed" routerDirection="forward">
+            <div class="cover community"></div>
+            <div class="title">Community</div>
+          </div>
+        </ion-slide>
+        <ion-slide tappable>
+          <div class="card" routerLink="/social/doctors-network" routerDirection="forward">
+            <div class="cover docnet"></div>
+            <div class="title">Doctors' Network</div>
+          </div>
+        </ion-slide>
+        <ion-slide tappable>
+          <div class="card" routerLink="/social/care-coordination" routerDirection="forward">
+            <div class="cover carecord"></div>
+            <div class="title">Care Cordination</div>
+          </div>
+        </ion-slide>
+        <ion-slide tappable>
+          <div class="card" routerLink="/social/topic-circle" routerDirection="forward">
+            <div class="cover topics"></div>
+            <div class="title">Topic Circle</div>
+          </div>
+        </ion-slide>
+        <ion-slide tappable>
+          <div class="card" routerLink="/news" routerDirection="forward">
+            <div class="cover news"></div>
+            <div class="title">News</div>
+          </div>
+        </ion-slide>
+        <ion-slide tappable>
+          <div class="card" routerLink="/videos" routerDirection="forward">
+            <div class="cover eduvids"></div>
+            <div class="title">Videos</div>
+          </div>
+        </ion-slide>
+      </ion-slides>
+    </div>
+  </section> 
+ 
+  <section>
+    <ion-label class="section__title" slot="start">
+      Patient Care
+    </ion-label>
+    <div class="overscroll-wrapper">
+      <ion-slides class="slides__dashboard patient-care" [options]="careSlideOpts">
+        <ion-slide tappable>
+          <div class="card" routerLink="/schedule" routerDirection="forward">
+            <div class="cover c-appoint"></div>
+            <div class="title">Appointment</div>
+          </div>
+        </ion-slide>
+        <ion-slide>
+          <div class="card">
+            <div class="cover t-appoint"></div>
+            <div class="title">Telemedicine</div>
+          </div>
+        </ion-slide>
+        <ion-slide tappable>
+          <div class="card" routerLink="/e-health-records" routerDirection="forward">
+            <div class="cover ehr"></div>
+            <div class="title">EHR</div>
+          </div>
+        </ion-slide>
+        <ion-slide tappable>
+          <div class="card" routerLink="/e-fax" routerDirection="forward">
+            <div class="cover efax"></div>
+            <div class="title">E-Fax</div>
+          </div>
+        </ion-slide>
+        <ion-slide tappable>
+          <div class="card" routerLink="/referrals" routerDirection="forward">
+            <div class="cover referrals"></div>
+            <div class="title">Referrals</div>
+          </div>
+        </ion-slide>
+      </ion-slides>
+    </div>
+  </section> -->
+  <!-- Referrals -->
+  <!-- <section>
+    <ion-label class="section__title" slot="start">
+      New Referrals
+    </ion-label>
+    <ion-list class="referral-list" (click)="showReferrals()">
+      <ion-item lines="inset">
+        <ion-avatar slot="start">
+          <img src="https://i.pravatar.cc/100?img=49" alt="user">
+        </ion-avatar>
+        <ion-label>
+          <ion-text color="medium">
+            <h3>Sally Peterson</h3>
+          </ion-text>
+          <p>DANCERITY, MD.</p>
+        </ion-label>
+        <ion-badge slot="end" color="primary">2</ion-badge>
+      </ion-item>
+      <ion-item lines="inset">
+        <ion-avatar slot="start">
+          <img src="https://i.pravatar.cc/100?img=9" alt="user">
+        </ion-avatar>
+        <ion-label>
+          <ion-text color="medium">
+            <h3>Ava Stevens</h3>
+          </ion-text>
+          <p>HINWAY, BDS.</p>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </section> -->
+  <!-- Orders -->
+  <section>
+    <ion-label class="section__title" slot="start">
+      Your Orders
+      <ion-text class="more-link" text-right routerLink="/shopping/order-history" routerDirection="forward">View All
+      </ion-text>
+    </ion-label>
+
+    <ion-slides class="slides__dashboard orders" [options]="ordersSlideOpts">
+      <ion-slide>
+        <ion-list class="orders-list">
+          <ion-item lines="inset">
+            <ion-label text-wrap>
+              <ion-text color="primary">
+                <h3>Order #8774-34443</h3>
+              </ion-text>
+              <p>From: O.R Tambo Internation Airport</p>
+              <p>To: Cape Town, West bound drive</p>
+              <small>Delivery Date: Oct 31, 2020</small>
+            </ion-label>
+          </ion-item>
+          <ion-item lines="none" detail>
+            <ion-label>
+              <small>View Details</small>
+            </ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-slide>
+    </ion-slides>
+  </section>
+
+  <!-- Deals --
+  <section *ngIf="dealLoaded">
+    <ion-label class="section__title" slot="start">
+      Latest Deals
+      <ion-text class="more-link" text-right routerLink="/marketplace" routerDirection="forward">View All</ion-text>
+    </ion-label>
+    <ion-slides class="slides__dashboard deals" [options]="dealsSlideOpts">
+      <ion-slide>
+        <ion-list class="deals-list">
+          <ion-item lines="inset" (click)="selectDeal(deals[0])">
+            <ion-thumbnail slot="start">
+              <img [src]="deals[0].media[0].url" alt="deal">
+            </ion-thumbnail>
+            <ion-label text-wrap>
+              <ion-text color="primary">
+                <h3>{{deals[0].title}}</h3>
+              </ion-text>
+              <p>{{deals[0].description}}</p>
+              <small>By {{deals[0].corp.name}}</small>
+            </ion-label>
+          </ion-item>
+          <ion-item lines="inset" (click)="selectDeal(deals[1])">
+            <ion-thumbnail slot="start">
+              <img [src]="deals[1].media[0].url" alt="deal">
+            </ion-thumbnail>
+            <ion-label text-wrap>
+              <ion-text color="primary">
+                <h3>{{deals[1].title}}</h3>
+              </ion-text>
+              <p>{{deals[1].description}}</p>
+              <small>By {{deals[1].corp.name}}</small>
+            </ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-slide>
+      <ion-slide>
+        <ion-list class="deals-list">
+          <ion-item lines="inset" (click)="selectDeal(deals[2])">
+            <ion-thumbnail slot="start">
+              <img [src]="deals[2].media[0].url" alt="deal">
+            </ion-thumbnail>
+            <ion-label text-wrap>
+              <ion-text color="primary">
+                <h3>{{deals[2].title}}</h3>
+              </ion-text>
+              <p>{{deals[2].description}}</p>
+              <small>By {{deals[2].corp.name}}</small>
+            </ion-label>
+          </ion-item>
+          <ion-item lines="inset" (click)="selectDeal(deals[3])">
+            <ion-thumbnail slot="start">
+              <img [src]="deals[3].media[0].url" alt="deal">
+            </ion-thumbnail>
+            <ion-label text-wrap>
+              <ion-text color="primary">
+                <h3>{{deals[3].title}}</h3>
+              </ion-text>
+              <p>{{deals[3].description}}</p>
+              <small>By {{deals[3].corp.name}}</small>
+            </ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-slide>
+      <ion-slide>
+        <ion-list class="deals-list">
+          <ion-item lines="inset" (click)="selectDeal(deals[4])">
+            <ion-thumbnail slot="start">
+              <img [src]="deals[4].media[0].url" alt="deal">
+            </ion-thumbnail>
+            <ion-label text-wrap>
+              <ion-text color="primary">
+                <h3>{{deals[4].title}}</h3>
+              </ion-text>
+              <p>{{deals[4].description}}</p>
+              <small>By {{deals[4].corp.name}}</small>
+            </ion-label>
+          </ion-item>
+          <ion-item lines="inset" (click)="selectDeal(deals[5])">
+            <ion-thumbnail slot="start">
+              <img [src]="deals[5].media[0].url" alt="deal">
+            </ion-thumbnail>
+            <ion-label text-wrap>
+              <ion-text color="primary">
+                <h3>{{deals[5].title}}</h3>
+              </ion-text>
+              <p>{{deals[5].description}}</p>
+              <small>By {{deals[5].corp.name}}</small>
+            </ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-slide>
+    </ion-slides>
+  </section>-->
+
+  <!-- Privacy policy 
+  <section class="announcement static" *ngIf="1">
+    <div class="close-btn" (click)="hideBanner()">&times;</div>
+    <div class="data-policies">
+      <h4>Your Data, Our Concern.</h4>
+      <p>A privacy policy is a statement or a legal document (in privacy law) that discloses some or all of the ways a
+        party gathers, uses, discloses, and manages a customer or client's data. It fulfills a legal requirement to
+        protect a customer or client's privacy.</p>
+      <p>Click to read more.</p>
+
+      <div class="act">
+        <button>Privacy Policies</button>
+        <button>Terms of Use</button>
+      </div>
+    </div>
+  </section> -->
+  <!-- Appo -->
+
+  <!-- Q Settings 
+  <section>
+    <ion-label class="section__title">Quick Settings</ion-label>
+    <div class="list-wrapper settings">
+      <ion-list>
+        <ion-item lines="inset">
+          <ion-label>Licence</ion-label>
+          <ion-label slot="end" text-right>
+            <ion-text color="primary">Free</ion-text>
+          </ion-label>
+        </ion-item>
+        <ion-item lines="inset" class="clickable" (click)="openTopics()">
+          <ion-label>Common Topics</ion-label>
+          <ion-label slot="end" text-right>
+            <ion-text color="primary" class="topics">
+              <span>Topic 1</span>
+              <span>Topic 2</span>
+            </ion-text>
+          </ion-label>
+        </ion-item>
+        <ion-item lines="inset">
+          <ion-label>Dark Mode</ion-label>
+          <ion-toggle slot="end" (ionChange)="changeUIMode($event)" [checked]="darkMode"></ion-toggle>
+        </ion-item>
+        <ion-item lines="inset">
+          <ion-label>Do not disturb</ion-label>
+          <ion-toggle slot="end"></ion-toggle>
+        </ion-item>
+        <ion-item lines="none" detail>
+          <ion-label>
+            <ion-text color="primary">
+              <small>View All Settings</small>
+            </ion-text>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+    </div>
+  </section> -->
+</ion-content>
+<ion-footer class="flat">
+  <footer-tabs></footer-tabs>
+</ion-footer>

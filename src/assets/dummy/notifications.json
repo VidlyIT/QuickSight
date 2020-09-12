@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "type" : "WC",
+    "title" : "Welcome to Carry Load.",
+    "description" : "Get your first contract here.",
+    "time" : 1566112537749
+  },
+  {
+    "id": 2,
+    "type" : "COMMENT",
+    "title" : "Contract",
+    "description" : "Takealot has submitted a bid for a trucking tender.",
+    "time" : 1566112697934
+  }
+]
