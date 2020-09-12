@@ -29,7 +29,7 @@ export class ProfileComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.title.setTitle('My Profile');
+    this.title.setTitle('Quick Sight');
     setTimeout(() => {
       this.dataLoading = false;
     }, 2000);
