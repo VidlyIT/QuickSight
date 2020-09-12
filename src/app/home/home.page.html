@@ -26,7 +26,7 @@
   </section>
   <section>
     <ion-label class="section__title" slot="start">
-      Recent Bids
+      Emergency Contacts
       <ion-text class="more-link" text-right routerLink="/schedule" routerDirection="forward">See All
       </ion-text>
     </ion-label>
@@ -197,32 +197,12 @@
   <!-- Orders -->
   <section>
     <ion-label class="section__title" slot="start">
-      Your Orders
-      <ion-text class="more-link" text-right routerLink="/shopping/order-history" routerDirection="forward">View All
-      </ion-text>
+      Car Tracker
     </ion-label>
 
-    <ion-slides class="slides__dashboard orders" [options]="ordersSlideOpts">
-      <ion-slide>
-        <ion-list class="orders-list">
-          <ion-item lines="inset">
-            <ion-label text-wrap>
-              <ion-text color="primary">
-                <h3>Order #8774-34443</h3>
-              </ion-text>
-              <p>From: O.R Tambo Internation Airport</p>
-              <p>To: Cape Town, West bound drive</p>
-              <small>Delivery Date: Oct 31, 2020</small>
-            </ion-label>
-          </ion-item>
-          <ion-item lines="none" detail>
-            <ion-label>
-              <small>View Details</small>
-            </ion-label>
-          </ion-item>
-        </ion-list>
-      </ion-slide>
-    </ion-slides>
+    <div>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d459108.20746517635!2d27.871387502688176!3d-25.97516047794139!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x1e95619cbec65033%3A0xf66262b07a847b4c!2sPretoria!3m2!1d-25.7478676!2d28.2292712!4m5!1s0x1e950c68f0406a51%3A0x238ac9d9b1d34041!2sJohannesburg%2C%20South%20Africa!3m2!1d-26.204102799999998!2d28.0473051!5e0!3m2!1sen!2sza!4v1599905163377!5m2!1sen!2sza" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    </div>
   </section>
 
   <!-- Deals --

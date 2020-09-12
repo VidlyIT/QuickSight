@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
 import { Title } from '@angular/platform-browser';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-wallet',
@@ -12,6 +13,7 @@ export class WalletPage implements OnInit {
   constructor(
     private nav: NavController,
     private title: Title,
+    private router: Router
   ) { }
 
   ngOnInit() {
@@ -20,6 +22,10 @@ export class WalletPage implements OnInit {
 
   goBack() {
     this.nav.back();
+  }
+
+  onSearch() {
+    this.router.navigate(['/medical-edit']);
   }
 
 }

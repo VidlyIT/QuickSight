@@ -48,12 +48,13 @@ export class FooterTabsComponent implements OnInit {
     this.nav.navigateForward(path);
   }
 
-  async callSylvie() {
-    const modal = await this.modal.create({
-      component: AssistantPage,
-      componentProps: { value: this.currentUrl },
-    });
-    return await modal.present();
+  async callAmbulance() {
+    this.router.navigate(['/ambulance']);
+    // const modal = await this.modal.create({
+    //   component: AssistantPage,
+    //   componentProps: { value: this.currentUrl },
+    // });
+    // return await modal.present();
   }
 
 }

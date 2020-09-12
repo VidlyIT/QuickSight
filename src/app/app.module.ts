@@ -13,6 +13,7 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ComponentsModule } from './_components/components.module';
 import { SearchComponent } from './_components/search/search.component';
+import { MedicalPageModule } from './medical/medical.module';
 
 @NgModule({
   declarations: [
