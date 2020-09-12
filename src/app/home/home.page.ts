@@ -11,6 +11,7 @@ import { VideoDetailsComponent } from '../videos/video-details/video-details.com
 
 import { InteractionService } from '../_services/interaction.service';
 import { HomeDataService } from './home-data.service';
+import { AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
@@ -89,9 +90,11 @@ export class HomePage implements OnInit {
     private nav: NavController,
     private router: Router,
     private homeData: HomeDataService,
+    private alert: AlertController
   ) { }
 
   ngOnInit() {
+    this.presentAlert();
     this.title.setTitle('Driver Dashboard');
     this.router.events.subscribe((event: Event) => {
       if (event instanceof NavigationStart) {
@@ -193,6 +196,18 @@ export class HomePage implements OnInit {
     if (modal) {
       modal.dismiss();
     }
+  }
+
+  async presentAlert() {
+    const alert = await this.alert.create({
+      cssClass: 'my-custom-class',
+      header: 'Emergency Alert',
+      subHeader: 'Urgent',
+      message: 'This is a alert message for possible car accident. An Ambulance will be requested upon failure of verifying user safety.',
+      buttons: ['Discard', 'Report']
+    });
+
+    await alert.present();
   }
 
   doRefresh(e) {
