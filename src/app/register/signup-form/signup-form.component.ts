@@ -33,7 +33,7 @@ export class SignupFormComponent implements OnInit {
   ngOnInit() {}
 
   ionViewDidEnter() {
-    this.title.setTitle('Step 3 | Doctor Registration');
+    this.title.setTitle('Step 3 | Quick Sight');
   }
 
   // canDeactivate(): boolean | Promise<boolean> {

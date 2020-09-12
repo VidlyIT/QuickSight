@@ -13,7 +13,7 @@ export class WelcomePage {
   constructor(private title: Title) { }
 
   ionViewDidEnter() {
-    this.title.setTitle('Doctors App');
+    this.title.setTitle('Quick Sight');
   }
 
 }

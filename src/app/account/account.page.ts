@@ -29,7 +29,7 @@ export class AccountPage implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.title.setTitle('My Account');
+    this.title.setTitle('Quick Sight');
     this.store.get('DARK_UI').then((mode) => this.darkMode = mode ? true : false)
   }
 
