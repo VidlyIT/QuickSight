@@ -8,7 +8,7 @@ export const SETTINGS = {
     dealsOnScrollCount: 2,
   },
   app: {
-    name: 'Carry Load',
+    name: 'QuickSight',
     version: '1.0',
   },
 };
