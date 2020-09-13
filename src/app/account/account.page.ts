@@ -4,6 +4,7 @@ import { NavController, AlertController, ModalController, ToastController } from
 import { Storage } from '@ionic/storage';
 import { SETTINGS } from '../app.global';
 import { InteractionService } from '../_services/interaction.service';
+import { SettingsService } from '../_services/settings.service';
 // import { TopicsComponent } from '../_components/topics/topics.component';
 
 @Component({
@@ -17,6 +18,7 @@ export class AccountPage implements OnInit {
   appName = SETTINGS.app.name;
   version = SETTINGS.app.version;
   darkMode: boolean;
+  monitoring: boolean;
 
   constructor(
     private title: Title,
@@ -26,11 +28,12 @@ export class AccountPage implements OnInit {
     private modal: ModalController,
     private store: Storage,
     private interact: InteractionService,
+    private settings: SettingsService
   ) { }
 
   ngOnInit() {
     this.title.setTitle('Quick Sight');
-    this.store.get('DARK_UI').then((mode) => this.darkMode = mode ? true : false)
+    this.store.get('DARK_UI').then((mode) => this.darkMode = mode ? true : false);
   }
 
   goBack() {
@@ -89,6 +92,10 @@ export class AccountPage implements OnInit {
           this.interact.setDarkMode(false);
         });
     }
+  }
+
+  monitorCar(event: any) {
+    this.settings.monitoring = event.detail.checked;
   }
 
   async logout() {

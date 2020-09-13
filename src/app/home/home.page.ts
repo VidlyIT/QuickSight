@@ -12,6 +12,7 @@ import { AlertService } from '../_services/alert.service';
 import { InteractionService } from '../_services/interaction.service';
 import { HomeDataService } from './home-data.service';
 import { SettingsComponent } from '../notifications/settings/settings.component';
+import { SettingsService } from '../_services/settings.service';
 
 @Component({
   selector: 'app-home',
@@ -22,7 +23,7 @@ export class HomePage implements OnInit {
 
   greetName: string;
   token: string;
-  monitoring = true;
+  monitoring: boolean;
   allTopics: any[] = [];
   userTopics: string[] = [];
   videos: any[] = [];
@@ -90,7 +91,8 @@ export class HomePage implements OnInit {
     private nav: NavController,
     private router: Router,
     private homeData: HomeDataService,
-    private alert: AlertService
+    private alert: AlertService,
+    public settings: SettingsService
   ) { }
 
   ngOnInit() {
@@ -146,7 +148,7 @@ export class HomePage implements OnInit {
   }
 
   monitorCar(event: any) {
-    this.monitoring = event.detail.checked;
+    this.settings.monitoring = event.detail.checked;
   }
 
   navigateTo(e: string) {
