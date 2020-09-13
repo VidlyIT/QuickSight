@@ -8,6 +8,7 @@ import { IonicModule } from '@ionic/angular';
 import { AmbulancePage } from './ambulance.page';
 import { FooterTabsComponent } from '../_components/footer-tabs/footer-tabs.component';
 import { ComponentsModule } from '../_components/components.module';
+import { MaterialModule } from '../material.module';
 
 const routes: Routes = [
   {
@@ -22,7 +23,8 @@ const routes: Routes = [
     FormsModule,
     IonicModule,
     RouterModule.forChild(routes),
-    ComponentsModule
+    ComponentsModule,
+    MaterialModule
   ],
   declarations: [AmbulancePage]
 })

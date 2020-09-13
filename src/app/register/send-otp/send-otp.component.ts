@@ -66,7 +66,7 @@ export class SendOtpComponent implements OnInit {
   }
 
   ionViewDidEnter() {
-    this.title.setTitle('Step 1 | Doctor Registration');
+    this.title.setTitle('Step 1 | Quick Sight');
   }
 
   async checkMobile() {}

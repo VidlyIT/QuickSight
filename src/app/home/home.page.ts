@@ -7,11 +7,11 @@ import { Subject } from 'rxjs';
 // import { InfoModalComponent } from '../_components/info-modal/info-modal.component';
 import { SearchComponent } from '../_components/search/search.component';
 import { TopicsComponent } from '../_components/topics/topics.component';
-import { VideoDetailsComponent } from '../videos/video-details/video-details.component';
+import { AlertService } from '../_services/alert.service';
 
 import { InteractionService } from '../_services/interaction.service';
 import { HomeDataService } from './home-data.service';
-import { AlertController } from '@ionic/angular';
+import { SettingsComponent } from '../notifications/settings/settings.component';
 
 @Component({
   selector: 'app-home',
@@ -22,7 +22,7 @@ export class HomePage implements OnInit {
 
   greetName: string;
   token: string;
-
+  monitoring = true;
   allTopics: any[] = [];
   userTopics: string[] = [];
   videos: any[] = [];
@@ -90,12 +90,12 @@ export class HomePage implements OnInit {
     private nav: NavController,
     private router: Router,
     private homeData: HomeDataService,
-    private alert: AlertController
+    private alert: AlertService
   ) { }
 
   ngOnInit() {
-    this.presentAlert();
-    this.title.setTitle('Dashboard');
+    this.alert.emergencyAlert();
+    this.title.setTitle('Quick Sight');
     this.router.events.subscribe((event: Event) => {
       if (event instanceof NavigationStart) {
         this.hideModal();
@@ -145,6 +145,10 @@ export class HomePage implements OnInit {
     this.store.set('BANN_PRIVACY', 'N');
   }
 
+  monitorCar(event: any) {
+    this.monitoring = event.detail.checked;
+  }
+
   navigateTo(e: string) {
     switch (e) {
       case 'REF':
@@ -164,6 +168,13 @@ export class HomePage implements OnInit {
     }
   }
 
+  async openSettings() {
+    const modal = await this.modal.create({
+      component: SettingsComponent,
+    });
+    return await modal.present();
+  }
+
   async openTopics() {
     const modal = await this.modal.create({
       component: TopicsComponent,
@@ -171,16 +182,6 @@ export class HomePage implements OnInit {
     return await modal.present();
   }
 
-
-  async playVideo(video) {
-    const modal = await this.modal.create({
-      component: VideoDetailsComponent,
-      componentProps: {
-        video
-      },
-    });
-    return await modal.present();
-  }
 
   async presentToast(msg) {
     const toast = await this.toast.create({
@@ -196,18 +197,6 @@ export class HomePage implements OnInit {
     if (modal) {
       modal.dismiss();
     }
-  }
-
-  async presentAlert() {
-    const alert = await this.alert.create({
-      cssClass: 'my-custom-class',
-      header: 'Emergency Alert',
-      subHeader: 'Urgent',
-      message: 'This is a alert message for possible car accident. An Ambulance will be requested upon failure of verifying user safety.',
-      buttons: ['Discard', 'Report']
-    });
-
-    await alert.present();
   }
 
   doRefresh(e) {

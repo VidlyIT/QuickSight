@@ -61,7 +61,8 @@ const routes: Routes = [
   { path: '**', loadChildren: './error/error.module#ErrorPageModule' },
   { path: 'medical', loadChildren: './medical/medical.module#MedicalPageModule' },
   { path: 'alert', loadChildren: './alert/alert.module#AlertPageModule' },
-  { path: 'ambulance', loadChildren: './ambulance/ambulance.module#AmbulancePageModule' }
+  { path: 'ambulance', loadChildren: './ambulance/ambulance.module#AmbulancePageModule' },
+  { path: 'emergency-category', loadChildren: './emergency-category/emergency-category.module#EmergencyCategoryPageModule' }
 ];
 
 @NgModule({

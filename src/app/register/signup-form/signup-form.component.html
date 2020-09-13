@@ -1,7 +1,7 @@
 <div class="page__inner h-100">
   <div class="login-wrapper">
     <div class="header">
-      <h2>Driver Profile</h2>
+      <h2>User Profile</h2>
       <h6 class="anim">Please fill up the details.</h6>
     </div>
     <form [formGroup]="signupForm" novalidate (ngSubmit)="onSubmit(signupForm)">
@@ -20,7 +20,7 @@
       </div>
       <div class="input-row anim">
         <mat-form-field appearance="outline" class="d-block">
-          <mat-label class="cff">Business Name</mat-label>
+          <mat-label class="cff">Surname</mat-label>
           <input
             matInput
             type="text"
@@ -32,6 +32,45 @@
         </mat-form-field>
       </div>
       <div class="input-row anim">
+        <mat-form-field appearance="outline" class="d-block">
+          <mat-label class="cff">Age</mat-label>
+          <input
+            matInput
+            type="text"
+            class="cff"
+            autocomplete="off"
+            formControlName="bname"
+          />
+          <!-- <mat-error *ngIf="userId.invalid">{{getErrorMessage('id')}}</mat-error> -->
+        </mat-form-field>
+      </div>
+      <div class="input-row anim">
+        <mat-form-field appearance="outline" class="d-block">
+          <mat-label class="cff">Gender</mat-label>
+          <input
+            matInput
+            type="text"
+            class="cff"
+            autocomplete="off"
+            formControlName="bname"
+          />
+          <!-- <mat-error *ngIf="userId.invalid">{{getErrorMessage('id')}}</mat-error> -->
+        </mat-form-field>
+      </div>
+      <div class="input-row anim">
+        <mat-form-field appearance="outline" class="d-block">
+          <mat-label class="cff">Medical Aid</mat-label>
+          <input
+            matInput
+            type="text"
+            class="cff"
+            autocomplete="off"
+            formControlName="bname"
+          />
+          <!-- <mat-error *ngIf="userId.invalid">{{getErrorMessage('id')}}</mat-error> -->
+        </mat-form-field>
+      </div>
+      <!--<div class="input-row anim">
         <p class="hint-text">
           Your full name is your default business name. Please edit if you've a
           business else keep the default.
@@ -39,7 +78,7 @@
         <p class="hint-text">
           <strong>Changing of business name is not allowed afterwards. </strong>
         </p>
-      </div>
+      </div>-->
       <div class="input-row">
         <button
           class="btn__signin anim loading-btn"
