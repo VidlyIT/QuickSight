@@ -52,7 +52,7 @@ export class NewReferralComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.title.setTitle('New Referral');
+    this.title.setTitle('Quick Sight');
     this.getRecentDoctors();
   }
 
