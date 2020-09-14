@@ -18,63 +18,6 @@
     "userType": "Patient"
   },
   {
-    "_id": "5d624355299ba4029b243c04",
-    "index": 1,
-    "picture": "https://i.pravatar.cc/100?img=59",
-    "age": 46,
-    "sex": "Male",
-    "name": {
-      "first": "Rosalinda",
-      "last": "Gillespie"
-    },
-    "email": "rosalinda.gillespie@undefined.info",
-    "phone": "+1 (863) 463-3097",
-    "address": "241 Verona Place, Clarktown, Maryland, 9284",
-    "location": {
-      "lat": "-73.084343",
-      "long": "-130.523154"
-    },
-    "userType": "Patient"
-  },
-  {
-    "_id": "5d624355804b319167beb305",
-    "index": 2,
-    "picture": "https://i.pravatar.cc/100?img=31",
-    "age": 43,
-    "sex": "Female",
-    "name": {
-      "first": "Alston",
-      "last": "Turner"
-    },
-    "email": "alston.turner@undefined.name",
-    "phone": "+1 (866) 505-2813",
-    "address": "735 Ridge Court, Brookfield, South Dakota, 5335",
-    "location": {
-      "lat": "41.786996",
-      "long": "-39.034368"
-    },
-    "userType": "Patient"
-  },
-  {
-    "_id": "5d6243556ffcdcdb173bdf52",
-    "index": 3,
-    "picture": "https://i.pravatar.cc/100?img=13",
-    "age": 27,
-    "sex": "Male",
-    "name": {
-      "first": "Cotton",
-      "last": "Wooten"
-    },
-    "email": "cotton.wooten@undefined.com",
-    "phone": "+1 (961) 581-2419",
-    "address": "634 Cheever Place, Finzel, Kansas, 9359",
-    "location": {
-      "lat": "-21.702184",
-      "long": "-64.854147"
-    },
-    "userType": "Patient"
-  },
-  {
     "_id": "5d624355aced07f6c9fdbd17",
     "index": 4,
     "picture": "https://i.pravatar.cc/100?img=26",
@@ -90,25 +33,6 @@
     "location": {
       "lat": "-39.148295",
       "long": "179.001659"
-    },
-    "userType": "Patient"
-  },
-  {
-    "_id": "5d624355475bb06f05132888",
-    "index": 5,
-    "picture": "https://i.pravatar.cc/100?img=16",
-    "age": 25,
-    "sex": "Female",
-    "name": {
-      "first": "Stein",
-      "last": "Lott"
-    },
-    "email": "stein.lott@undefined.biz",
-    "phone": "+1 (956) 462-3963",
-    "address": "145 Gallatin Place, Caledonia, South Carolina, 3343",
-    "location": {
-      "lat": "29.415409",
-      "long": "154.884216"
     },
     "userType": "Patient"
   },
@@ -159,23 +83,23 @@
     "index": 1,
     "isCertified": true,
     "balance": "$2,133.88",
-    "picture": "https://i.pravatar.cc/100?img=3",
+    "picture": "data:image/png;base64,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",
     "age": 43,
     "sex": "Male",
     "name": {
-      "first": "Margret",
-      "last": "Stevenson"
+      "first": "Dr. Steve",
+      "last": "Khumalo"
     },
     "email": "margret.stevenson@undefined.tv",
     "phone": "+1 (865) 590-2005",
     "address": "962 Martense Street, Rote, Virgin Islands, 976",
-    "about": "Mollit cupidatat laboris elit ut. Sint dolore adipisicing nostrud dolore ipsum. Nostrud esse ad velit ea culpa duis ex. Quis qui aliquip dolor sint enim elit do amet esse aute officia. Laborum tempor exercitation irure tempor veniam adipisicing sunt voluptate voluptate ad commodo laboris labore minim.\n\nUt velit enim Lorem aliquip adipisicing nostrud ea in enim minim consectetur duis voluptate consectetur. Id nulla eiusmod do occaecat Lorem duis sunt aliqua duis incididunt exercitation laborum adipisicing veniam. Ipsum sint velit ad sunt quis in aliquip ullamco. Enim ea velit velit minim amet laboris consequat pariatur non id occaecat.",
+    "about": "Qualified Doctor",
     "location": {
       "lat": "-88.381841",
       "long": "-11.377409"
     },
     "userType": "Doctor",
-    "speciality": "LIQUICOM"
+    "speciality": "Gynacologist/Obstetrician"
   },
   {
     "_id": "5d6243559d10cd08b4d5aca1",
@@ -228,23 +152,22 @@
     "index": 4,
     "isCertified": true,
     "balance": "$1,772.48",
-    "picture": "https://i.pravatar.cc/100?img=5",
+    "picture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOsAAADWCAMAAAAHMIWUAAAAe1BMVEX39/cBb5IAYory8/T//fwAbJAAZowAZIsAaY77+vn//vwAa5AAZ4zw9PUAcJP5+vm/09vM2+K3zddXkqtjmbB5pbnU4eabu8np7/Gtx9Li6u2kwc6DrL6TtcVNjae80Nk8g6ApfJt+qLtuoLU+hqItfpzQ3+VSj6kAW4VJfBf+AAANmklEQVR4nO1daZuiOBBGTAIJAt63trbH7P//hZsASk4Fkm7NjO+HfXbU1hSpuyqVIPjggw8++OCDDz744M2AMQFBv0QOCMavXtBPAQMy35wOWRQyxNn5tBjlfyW9mFy/YRTD3h0wiVG0X8wBePXa3AKDr0OU9FTAODru1uAv2lwwP0RQQ2lFLpqMyN9CLdiFRkpLcqPL8K/YWxzs0UNKC0TnK3n1Sq2B06NOUDV7O01911Lp8TH/1kjQym9iwaHRrlaMPE09lloyayCrNeJs7e3W4mHYhlQmtWNvVVTWVFjviDZ+7izYteLgEuHCS2LTqD2pnhILdnEXWnuRf7YHrLNOpFJi536ZHrzct9TBNWCWvnr5bYDXvdYquEYy9cnypO2tDY9o7A8Xk0k3tVQjfzUJTYG/OstqBbTzRRfjxsGNEdAT9YRXHfwleWM3fkgsOViT2oNHL5gYzzv5hhL8cCjwwlYJM8QLH2gFkxa5CCPgxAcmBg4oZfCB1tTWuJYIPbA6blSTH8oJD+2ta0HryANaxwMntA488P/xxs2++uA54Y0L80oNrA+0OnEl/HAmnNHqw77+S/LqIKIraF15QOuXI1q/PKB15MZvQj74Ev+QjxisHdG6fDUhDZA7inM82NYAdK3jiMh8iF/B2QmtBy9onVpnhyng1Atat05ya1sfaHXjJPrgDrtKTERDH2gN1k5oXftRqnOim15NRDOAiz2x8OKDagrAwkXeP/Gh9SdfO/IRPRBYvHOUM929vyIGf1yoJiqxf96fiV1opoJWD7RTfnRCaq93fH95/ZdoddAEUwAe3183uegMKXB4/0Y9N+GrHwFs17ZhGbEHrWt47CgX7kH9NXDmI76akAYgjvKI76+aqMDOnMQ5s/cXV1cFHR9aQyiwXVN4AZh5QSoN1h301PoQqjOkDvbVg661AmBjK7EeHasDezvfKd57QyrFWTtjoRmS6Pzq5bcCHk67EptM/Uj51yCdKx1o6IPHJGDZmVYfmgdEgEtHWj3IqcnoWob1o/Aqoqtb7IkjLKETqb3eq5fdBd0STz6kmVR0S8Z4kXrRoIvARq9edDeQSXsmhhPvHIkCXZjYVxYOgvYucfLqJXdF+yybHxk1Hdq3EnvRNKwHOLfTTvDs67Yy7dRuY32aK6EAtCrGenJI3YB2vYnIt4SEiGWbBqCBf1E6h39pX9sdrvPhuKAZ7eI6P+O5G1rWYr2ouZrQciaBD7MHTMCjdpGOD2foTGh7ntuPAw16kFO7QCc5+Suw7VxEv51EvGupmzzoj1aBQdElShZtAp1oUbBw7tXwcEzWs1LNkFVzYqNVQSpenebeDIYH4GsfRpW/B4bmefcCYDQshRVvwnD/hT2QXAyWiwzBunUSzBu1AMFsXv0BXgwo4dlu+eabi8H1FBc2tS634eXluZWNL8sbZVWjaoymo/cV3Bzkq8Pt3oLkdGdCnE+fCW00ze9kge/kxtWXVfCWBpfqo21Su4RCzAJ2j4mN+F5hcqp5fpBs12+3txgMJxHPquLxGjKMzUILY6FDQpxNF2e/Tcoz4HkmN/mI6U8qtKYwANWiWkBKtMYFg7yJ5LL7foAymFY+hoHxTM/H0Uy6MEg+CBKOcZDO3sHkAjxe4WCp0qFUZsA4USOBJBkrhlT+TMbaOf/bj19rcjFZ7rL/5rkurRQpcTdYHmQ+RoelQkBffm5oR1ifLnqlyaXGdBrFyQEERNPfoynNYKqPef6EVP+qH1KLQCilG0ufZhxNry8RXBCsiuuOqIOU60bAaGcSgWtWJ4wH2VXDlZo0K/PBytYwGB1WwS+zMgZ3YxqNsDb9oD+/ivPTLcwLT7n2Exp5yHCdkUTU5P7i5grGFOX6ZgF40j9/MDwW7x+HhvdP6pehIeaK9HE0+a07ozAYX2pjCvcgwNo7ygw5BpwXTwZOtLuqz2Ww57bktjuJLuPfoBaMLryCSbYAz7VuAtIeJrpfCpUc9TcDaadTZJR5DqJau4x+Wm5x/ySmVdAKG3pABvrhcPdtg0ddNhivdNUuqtSV/sbw1P/RraV6VPrF/6hq0meVtBULsK/5PdFV0fVVEfZElfl8sVaPuwJZSEkGeLnm1Prr08BIfexkyy8YfatrxVoeodEwvirvwCpB9RMAJ8mOwmOpYIC2p1TN4su9p2pPqaFSwHhEZ8Qjg7K3J3UqryO8iSTRXbindgLLbr16usrQdQzPRF8bQj9T2gMTkR6qCjf96r18vYXKIhWrg5VzO5Fc1DBkz9kABqzVCugnZqiDqagg0ZE36DkIdgPZzCpziZbKvkpdA1pv8yGtvYH7nSVSGiXayvfUgvVZMhdKKQqvRVoTOcFiKnYZeZitZOdYQUlXzUGk8fAw+BafB1SOTwHha8Iv5f29noXDKTHPmAwdt1kshTVAeE/mkjxNwY2Z5c2P1Rj2VG9crCrRVG+8zuznzPM0odP+GekuBlTFpiBd7DPYO07HFUNLCUNNXJfWX6SehdTNuIXosA3Y15gL14nLpmPp8p+qGoHzHUKFHw+jrGJHcuJ3RlNPrQ/Hao64auq10Z85qT5n7r0OHc7vzYUyBSqVAV4fuXRweCp/DgtjfqDmgd/aRTTJUKCSuqnTLubuRuhudow48bBqBsXzRHjMqDzciIU4JboqD/w2a0MzKwNfFfvL7uXDIO8XdUpgLPq5G7gtGviwMBR4nUgcVR1aFW6R1BBEqgbqZKbytzxyJGafIaNJHCaTEfvfmaEy5Kwgj4f844y/yzWq1TdUNnVjvqdJGWCDv25fpjbQqmNzgvvV1jAsJEdPqrvRkUDQGHGh4EUdVKE0dELwpUxMrocUqM6wnGVmDjVe3fNT1Pk2HtJz1VUiaIykiMPwSOfEwKxQETm3sfI0d/5ByEKmRKiFtHP/zjUSfV+XEyYWvz8qpBUctOq/NCO82Mmmj3CiLwsZkS9UirAgPywC7JuaiDRasAut4txZtnWiBHMo7IiQ4RVndYoBrBS+KqMaMiD8eMEHpgZHN5oYbPlnyVwhbDyzgDZMW/JpFLEnWBR9MUujSYJLtK4e0Jo4OTYLBHeFpb7nJtVPf3KTisdyEjHPIsV0vJd4r6ffEYoCFFLPNDX5iW7uAiP8/G9WagS6JMR9QSssMirfJyv7u8KJMrX/lvF47YcVMaxJeHq9swtFLAwBZGbg4an7IjfOrzrkYlTZ3+VrA1idccUMCb5WL0O2rbqiQAUnbmIqs/DjGdloeXeNyqfDNbYr17kl9Xu6Og6izwmM4CDpJYPeiD7EB/ckOJkgI1h4asbI44GlA8rEPKdxAbtqHblUoy5ML/4Wp4vJZbJgVQJDKF/AxT0PwgILpnvc08KUa85/pJ4Xwbq0RHD+slYyBoXTjAEpsgFk9uAEjAsDK+gTqkye3hmDclF11wpI3Zb6AJ2hUIKm93Ir6Cs5W+GTDmJYQTzpHj096ImkgiyngB50Gpi0TpxtUsCQbrKHP+zCmeA9Pngkz+eVUr6UKneVhtRNnLi7GrmZCLSfbWd79ISdXMyO5PeROQZPr4xhfClYnZsCUsW1XuHDUxAwieVgWYWLY8L8nGgmrtqaoQDUF6ttt1qH4tszMvalC2B/sYWLOdR8UiJqIK6lwPLGknE+Q67zZausE7Ge5OsiNcHbf+YgPl9UvMMiS5bjOvX1i6o1yMVgUHtauT4F5l8vn/NaQj8m+OilitRblbL67uK+ktjameB3Q9kwA1iLDp86LQdk6EWyjMW6jN2QYX+DB08cNdeNTlIxKyy0AiSsdqkfhg+L+MSYbmgB+wNq/HWu9Mk1GhnB2pGE9GdhRYl+61iiyMk1NPYXxvIbGeUBeeB93xFvpN6YIhdsuGqGtQYRF6Nt7Q/j8VJGw27D5oigLofUQckyRwZJZ3vu5Ooz++FlnOAVEVYT28BCHTHXi+ZGSafxraEZrCXsT0VzsQk8PSj4Cr96IQEQPjjYYTWdVIL6dm6uK1Er261pPdar+ja148lgzC6u40xMd5LQJZKWo1QMsHacQE0cC2CaDcdDRPavwtTocB2xo9vnkS2ty3odzJVoZhzor0rXrVD3yHiOo0E40QihpePE69PmtEZYphVOUxNHREtHNz3YDkTimZY1BTY7bB8TJXDJjH+JRm6G5FtPkeRrZ4UebiRaB8LLeYF4a3IXEid3Mvbsb3jmzQGLQ8mxwY9SC6OexjBvnqNttb4hS7CK1B/GwxD2IEoghdSeiNhr7EBonPUD4OiGrzZINC26rWidSHUo8HVIsmHK8CWcFTzMixcpjdMl1ucgfhiJZflKbGGIrtSvBbc2NcJ7fUl1AJC+zcqS345ksBUsbxeSb6/ij/DxMsncwvoNsnPh4LaGZfkqlbQn2s6rggObMcBRlFSnMjAh+fBR0fIHkdiVr5QDkHGEsuOoEM2h0KF2XhcvLiinIze+QWvYla80Bwp6TOXW/5VeTF4hpzcgq/LV00LVW8GufNV2KNFrYZeFcXOn9m/BLgvj5j6n34Jd+epR0f79YJeFaTts6rWwK1+R5z/wVrBxEp1dhPk7uNjQih1dDvk7sGwjaFCCfB9Yzrm1v6br9xDZ3vNGTr54ici+DR5sQx/sDgwtMzDlzl73KHx3oP3IyeEGTPrvjzcYefTBBx988MEHH3zw1+B/6OTaiRp73xQAAAAASUVORK5CYII=",
     "age": 46,
     "sex": "Female",
     "name": {
-      "first": "Sears",
-      "last": "Hoffman"
+      "first": "Dr. Mlungisi",
+      "last": "Zulu"
     },
-    "email": "sears.hoffman@undefined.ca",
+    "email": "doctor.zulu@undefined.ca",
     "phone": "+1 (841) 550-3695",
-    "address": "924 Catherine Street, Driftwood, Palau, 9553",
-    "about": "Ullamco ad fugiat eiusmod reprehenderit et. Anim anim consequat magna non elit quis officia. Quis deserunt ex enim veniam ea duis dolor laboris ad nisi ut laborum.\n\nEx ad ullamco reprehenderit id consequat. Ullamco qui enim non nulla id enim in. Culpa sint quis proident proident. Aute adipisicing aute minim deserunt ex dolore aliquip dolore non voluptate adipisicing laboris. Adipisicing amet ut anim ullamco.",
+    "address": "Qualified Doctor",
     "location": {
       "lat": "3.185373",
       "long": "155.011998"
     },
     "userType": "Doctor",
-    "speciality": "KIOSK"
+    "speciality": "Anesthetist"
   },
   {
     "_id": "5d6243556077aafa77d234d3",
@@ -274,45 +197,43 @@
     "index": 6,
     "isCertified": true,
     "balance": "$1,124.48",
-    "picture": "https://i.pravatar.cc/100?img=49",
-    "age": 30,
-    "sex": "Feale",
+    "picture": "https://e7.pngegg.com/pngimages/498/758/png-clipart-computer-icons-family-interpersonal-relationship-family-blue-child.png",
+    "age": 27,
+    "sex": "Male",
     "name": {
-      "first": "Sally",
-      "last": "Peterson"
+      "first": "Khutso",
+      "last": "Lesetla"
     },
-    "email": "santiago.peterson@undefined.info",
-    "phone": "+1 (856) 449-3663",
-    "address": "739 Etna Street, Deputy, Maine, 9518",
-    "about": "Amet excepteur ut anim deserunt consectetur irure exercitation minim aute aliquip mollit commodo duis. Est tempor culpa non aute excepteur duis elit Lorem nulla irure voluptate. Lorem ea sunt voluptate anim eiusmod aute aute. Irure veniam ad anim commodo voluptate nulla voluptate culpa cupidatat dolor commodo esse. Id aute dolore est cupidatat sint id. Sunt id aliquip officia ullamco sunt esse est sit. Culpa aliquip culpa deserunt elit duis exercitation.\n\nDolor minim deserunt sunt eiusmod commodo in consectetur deserunt mollit. Sunt est aute consectetur consectetur. Do eiusmod ad elit commodo dolor reprehenderit aliquip tempor ipsum adipisicing minim est cupidatat elit. Ut aliqua est voluptate elit commodo exercitation non. Est anim exercitation aliquip incididunt labore enim ipsum pariatur. Eu consectetur id do cillum nostrud enim tempor ex ut sunt deserunt qui consectetur culpa.",
+    "email": "khutso.lesetla@email.com",
+    "phone": "+27 (076) 99855",
+    "address": "73 Street, Gauteng, South Africa",
+    "about": "Civil Engineer ",
     "location": {
       "lat": "-85.791551",
       "long": "-75.776495"
     },
-    "userType": "Doctor",
-    "speciality": "DANCERITY"
+    "userType": "Doctor"
   },
   {
     "_id": "5d6243556f87f09aee7ef4d4",
     "index": 7,
     "isCertified": true,
     "balance": "$2,138.08",
-    "picture": "https://i.pravatar.cc/100?img=9",
-    "age": 34,
-    "sex": "Female",
+    "picture": "https://e7.pngegg.com/pngimages/498/758/png-clipart-computer-icons-family-interpersonal-relationship-family-blue-child.png",
+    "age": 24,
+    "sex": "Male",
     "name": {
-      "first": "Ava",
-      "last": "Stevens"
+      "first": "Lethabo",
+      "last": "Lesetla"
     },
-    "email": "ava.stevens@undefined.name",
+    "email": "lethabo.lesetla@undefined.name",
     "phone": "+1 (915) 545-2765",
-    "address": "696 Battery Avenue, Itmann, Nevada, 6977",
-    "about": "Reprehenderit ullamco commodo fugiat eiusmod enim et culpa laboris et ut. Eu voluptate velit dolor et consectetur dolore dolore in mollit esse Lorem magna ea Lorem. Eu magna deserunt sunt sit consectetur officia dolor eu. Consequat minim sint fugiat qui dolor irure nostrud. Ea amet non ullamco ut reprehenderit magna enim eu. Minim Lorem irure ex fugiat ut tempor esse sunt nostrud et cillum minim cillum.\n\nMinim esse nisi quis est fugiat ipsum pariatur mollit laboris. Officia consectetur do eiusmod occaecat anim ullamco aliqua sit proident aliquip duis qui. Minim Lorem officia dolor non adipisicing culpa. Sit consequat aliquip laborum minim eiusmod duis voluptate cillum minim. Voluptate ea adipisicing voluptate ea ut reprehenderit sint elit enim labore culpa. Minim incididunt exercitation cupidatat cillum cupidatat sit duis.",
+    "address": "696 Battery Avenue, Gauteng, South Africa",
+    "about": "Police Officer",
     "location": {
       "lat": "-42.235447",
       "long": "-127.794607"
     },
-    "userType": "Doctor",
-    "speciality": "HINWAY"
+    "userType": "Doctor"
   }
 ]

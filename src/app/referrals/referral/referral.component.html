@@ -4,7 +4,7 @@
       <img [src]="refData.avatar" alt="">
     </ion-avatar>
     <ion-label>
-      <h2>Dr. {{ref.getFullname(refData.practitioner)}}</h2>
+      <h2>{{ref.getFullname(refData.practitioner)}}</h2>
       <ion-text color="medium">
         <h3>{{refData.practitioner.speciality}}</h3>
       </ion-text>
@@ -19,10 +19,10 @@
     <ion-badge slot="end" color="primary" *ngIf="referral.state === 2">Accepted</ion-badge>
     <ion-badge slot="end" color="danger" *ngIf="referral.state === 3">Declined</ion-badge>
   </ion-item>
-  <ion-item lines="inset">
+  <!--<ion-item lines="inset">
     <ion-label color="medium">Patient</ion-label>
     <ion-label slot="end" text-right>{{ref.getFullname(refData.patient)}}</ion-label>
-  </ion-item>
+  </ion-item>-->
   <ion-item lines="inset" *ngIf="referral.referralMsg">
     <ion-label text-wrap>
       <ion-text color="medium">Referred Message</ion-text>
