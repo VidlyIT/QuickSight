@@ -32,7 +32,7 @@ export class ReferralsPage implements OnInit {
   }
 
   ngOnInit() {
-    this.title.setTitle('Emergency Contacts');
+    this.title.setTitle('Quick Sight');
 
   }
 
