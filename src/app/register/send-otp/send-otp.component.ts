@@ -17,9 +17,9 @@ export class SendOtpComponent implements OnInit {
 
   isdCodes = [
     {
-      name: 'India',
-      dial_code: '+91',
-      code: 'IN',
+      name: 'South Africa',
+      dial_code: '+27',
+      code: 'ZAR',
     },
     {
       name: 'United Arab Emirates',
