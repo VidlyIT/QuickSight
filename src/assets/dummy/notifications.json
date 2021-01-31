@@ -2,15 +2,27 @@
   {
     "id": 1,
     "type" : "WC",
-    "title" : "Drving Mode Activated",
-    "description" : "Location Enabled.",
-    "time" : 1566112537749
+    "title" : "Turn off the tap while brushing your teeth",
+    "description" : "You could save up to 9 liters"
   },
   {
     "id": 2,
     "type" : "COMMENT",
-    "title" : "Driving",
-    "description" : "Ensure that you have your seatbelt on.",
-    "time" : 1566112697934
+    "title" : "Take a 5 minute shower",
+    "description" : "You could save up to 100 litres"
+  },
+  {
+    "id": 2,
+    "type" : "COMMENT",
+    "title" : "Switch to a Low-Flow shower head",
+    "description" : "You could save up to 60 percent per month"
+  },
+  {
+    "id": 2,
+    "type" : "COMMENT",
+    "title" : "Run the washing machine and dishwasher when you have a full load",
+    "description" : "You could save up to 5000 gallons per year"
   }
+
+
 ]
