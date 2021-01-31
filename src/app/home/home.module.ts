@@ -7,7 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { ComponentsModule } from '../_components/components.module';
 
 import { HomePage } from './home.page';
-
+import { ZXingScannerModule } from '@zxing/ngx-scanner';
 const routes: Routes = [
   {
     path: '',
@@ -22,6 +22,7 @@ const routes: Routes = [
     IonicModule,
     RouterModule.forChild(routes),
     ComponentsModule,
+    ZXingScannerModule
   ],
   declarations: [HomePage],
   schemas: [
