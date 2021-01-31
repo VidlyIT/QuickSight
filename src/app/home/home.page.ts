@@ -13,7 +13,7 @@ import { InteractionService } from '../_services/interaction.service';
 import { HomeDataService } from './home-data.service';
 import { SettingsComponent } from '../notifications/settings/settings.component';
 import { SettingsService } from '../_services/settings.service';
-
+import { BarcodeFormat} from '@zxing/library';
 @Component({
   selector: 'app-home',
   templateUrl: './home.page.html',
@@ -32,9 +32,15 @@ export class HomePage implements OnInit {
 
   dealLoaded = false;
 
+  torchEnabled = false;
+
+  tryHarder = false;
+
   darkMode: boolean;
   showPrivacyBanner = true;
   showReminder: boolean;
+  qrResultString: string | undefined;
+  hasPermission: boolean | undefined;
 
   private refreshNeeded: Subject<void> = new Subject<void>();
 
@@ -81,6 +87,12 @@ export class HomePage implements OnInit {
     // spaceBetween: 20,
   };
 
+  formatsEnabled: BarcodeFormat[] = [
+    BarcodeFormat.CODE_128,
+    BarcodeFormat.DATA_MATRIX,
+    BarcodeFormat.EAN_13,
+    BarcodeFormat.QR_CODE,
+  ];
 
   constructor(
     private title: Title,
@@ -97,7 +109,7 @@ export class HomePage implements OnInit {
 
   ngOnInit() {
     this.alert.emergencyAlert();
-    this.title.setTitle('Quick Sight');
+    this.title.setTitle('Amanzi');
     this.router.events.subscribe((event: Event) => {
       if (event instanceof NavigationStart) {
         this.hideModal();
@@ -211,6 +223,14 @@ export class HomePage implements OnInit {
 
   dismissReminder() {
     this.showReminder = false;
+  }
+
+  onCodeResult(resultString: string) {
+    this.qrResultString = resultString;
+  }
+
+  OnHasPermission(has: boolean) {
+    this.hasPermission = has;
   }
 
 }

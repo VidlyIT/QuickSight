@@ -1,59 +1,50 @@
 <div class="page__welcome h-100">
-  <div class="bg"></div>
-  <div class="content">
-    <ion-slides class="onboarding slides" pager="true" [options]="slideOpts">
-      <ion-slide class="screen">
-        <div class="intro">
-          <div class="image"></div>
-          <div class="text">
-            <h2>Welcome to</h2>
-            <h2>Quick Sight</h2>
-            <p>
-             Requesting an ambulance made easy
-            </p>
-          </div>
-        </div>
-      </ion-slide>
-      <ion-slide class="screen">
-        <div class="intro">
-          <div class="image"></div>
-          <div class="text">
-            <h2>About Us</h2>
-            <p>When someone calls an ambulance there is no way of tracking where the ambulance is in 
-              relation to the requested address. We offer a feature for medical assistance as well 
-              as the medical facility to track, geo-fence and monitor the activities of the ambulance 
-              remotely.</p>
-          </div>
-        </div>
-      </ion-slide>
-    </ion-slides>
-    <div class="welcome-text">
-      <div class="intro">
-        <div>
-          <div class="social-login">
-            <!-- <button class="btn btn-fill fb">Continue with Facebook</button> -->
-            <button
-              class="btn btn-fill"
-              routerLink="/register"
-              routerDirection="root"
-            >
+    <div class="bg"></div>
+    <div class="content">
+        <ion-slides class="onboarding slides" pager="true" [options]="slideOpts">
+            <ion-slide class="screen">
+                <div class="intro">
+                    <div class="image"></div>
+                    <div class="text">
+                        <h2>Welcome to</h2>
+                        <h2>Amanzi Jo</h2>
+                        <p>
+                            Changing how you see water
+                        </p>
+                    </div>
+                </div>
+            </ion-slide>
+            <ion-slide class="screen">
+                <div class="intro">
+                    <div class="image"></div>
+                    <div class="text">
+                        <h2>About Us</h2>
+                        <p>When someone calls an ambulance there is no way of tracking where the ambulance is in relation to the requested address. We offer a feature for medical assistance as well as the medical facility to track, geo-fence and monitor
+                            the activities of the ambulance remotely.
+                        </p>
+                    </div>
+                </div>
+            </ion-slide>
+        </ion-slides>
+        <div class="welcome-text">
+            <div class="intro">
+                <div>
+                    <div class="social-login">
+                        <!-- <button class="btn btn-fill fb">Continue with Facebook</button> -->
+                        <button class="btn btn-fill" routerLink="/register" routerDirection="root">
               Register Now
             </button>
-          </div>
-          <div class="divider">
-            <small>Already registered? </small>
-          </div>
-          <div class="login">
-            <button
-              class="btn btn-outline"
-              routerLink="/login"
-              routerDirection="root"
-            >
-              Sign In
+                    </div>
+                    <!-- <div class="divider">
+                        <small>Already registered? </small>
+                    </div> -->
+                    <div class="login">
+                        <button class="btn btn-outline" routerLink="/home" routerDirection="root">
+              Scan
             </button>
-          </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 </div>

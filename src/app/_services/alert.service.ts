@@ -11,10 +11,10 @@ export class AlertService {
   async emergencyAlert() {
     const alert = await this.alert.create({
       cssClass: 'my-custom-class',
-      header: 'Emergency Alert',
+      header: 'Water Quality Alert',
       subHeader: 'Urgent',
-      message: 'Would you like to send a "I am OK" notification, to your contact numbers.',
-      buttons: ['I am OK', 'I need help', 'Cancel']
+      message: 'The water quality for tap 34342#4343 is good for drinking.',
+      buttons: ['Report', 'Cancel']
     });
 
     await alert.present();
